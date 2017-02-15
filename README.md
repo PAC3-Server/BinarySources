@@ -1,2 +1,2 @@
-# BinarySources
-Stuff you usually don't really see
+# Binary Sources
+All the non-lua Stuff we use.

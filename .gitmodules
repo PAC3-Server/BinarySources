@@ -1,0 +1,3 @@
+[submodule "gm_stringtable"]
+	path = gm_stringtable
+	url = https://github.com/danielga/gm_stringtable.git
