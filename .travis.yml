@@ -10,7 +10,7 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - gcc-4.8-multilib
-    - g++-4.8
+    - g++-4.8-multilib
     - clang
 env:
   - GARRYSMOD_COMMON="$TRAVIS_BUILD_DIR/../garrysmod_common" SOURCE_SDK="$TRAVIS_BUILD_DIR/../sourcesdk-minimal"
