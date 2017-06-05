@@ -24,10 +24,10 @@ before_script:
 script:
   - cd $TRAVIS_BUILD_DIR
   - gcc --version
- # - for f in */projects; do 
- #     path=$(dirname $f);
- #     echo "Building $path";
- #     $TRAVIS_BUILD_DIR/premake5 --os=linux --file=$f/premake5.lua gmake;
- #     cd "$f/linux/gmake";
- #     make;
- #   done
+ - for f in */projects; do 
+     path=$(dirname $f);
+     echo "Building $path";
+     $TRAVIS_BUILD_DIR/premake5 --os=linux --file=$f/premake5.lua gmake;
+     cd "$f/linux/gmake";
+     make CC=gcc-4.8 CXX=g++-4.8;
+   done
