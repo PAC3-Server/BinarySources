@@ -20,8 +20,6 @@ env:
   - SOURCE_SDK="$TRAVIS_BUILD_DIR/../sourcesdk-minimal"
 before_script:
   - wget https://github.com/PAC3-Server/premake5-travis/raw/master/premake5
-  - chmod +x premake5
-  - export PATH=$PATH:`pwd`/premake5
   - cd ..
   - git clone https://github.com/danielga/garrysmod_common.git
   - git clone https://github.com/danielga/sourcesdk-minimal.git
@@ -30,7 +28,7 @@ script:
   - for f in */projects; do 
       path=$(dirname $f);
       echo "Building $path";
-      premake5 --os=linux --file=$f/premake5.lua gmake;
+      $TRAVIS_BUILD_DIR/premake5 --os=linux --file=$f/premake5.lua gmake;
       cd "$f/linux/gmake";
       make;
     done
