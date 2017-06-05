@@ -23,10 +23,11 @@ before_script:
   - git clone https://github.com/danielga/sourcesdk-minimal.git
 script:
   - cd $TRAVIS_BUILD_DIR
-  - for f in */projects; do 
-      path=$(dirname $f);
-      echo "Building $path";
-      $TRAVIS_BUILD_DIR/premake5 --os=linux --file=$f/premake5.lua gmake;
-      cd "$f/linux/gmake";
-      make;
-    done
+  - gcc --version
+ # - for f in */projects; do 
+ #     path=$(dirname $f);
+ #     echo "Building $path";
+ #     $TRAVIS_BUILD_DIR/premake5 --os=linux --file=$f/premake5.lua gmake;
+ #     cd "$f/linux/gmake";
+ #     make;
+ #   done
