@@ -31,3 +31,6 @@ script:
      cd "$f/linux/gmake";
      make CC=gcc-4.8 CXX=g++-4.8;
    done
+
+notifications:
+  webhooks: http://threekelv.in:4567/webhook
