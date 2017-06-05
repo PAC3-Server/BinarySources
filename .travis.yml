@@ -33,4 +33,4 @@ script:
    done
 
 notifications:
-  webhooks: http://threekelv.in:4567/webhook
+  webhooks: http://threekelv.in:4567/travis
