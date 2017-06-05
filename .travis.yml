@@ -9,6 +9,7 @@ addons:
     sources:
     - ubuntu-toolchain-r-test
     packages:
+    - linux-libc-dev
     - gcc-4.8-multilib
     - g++-4.8-multilib
     - clang
