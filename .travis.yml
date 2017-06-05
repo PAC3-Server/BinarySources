@@ -2,6 +2,7 @@ sudo: false
 language: cpp
 compiler:
   - clang
+  - gcc
 install: 
  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
 addons:
@@ -14,6 +15,7 @@ addons:
     - gcc-4.8
     - g++-4.8
     - clang
+    - gcc-multilib
 env:
   - GARRYSMOD_COMMON="$TRAVIS_BUILD_DIR/../garrysmod_common" SOURCE_SDK="$TRAVIS_BUILD_DIR/../sourcesdk-minimal"
 before_script:
