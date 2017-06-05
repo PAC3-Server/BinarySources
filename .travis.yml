@@ -25,4 +25,5 @@ before_script:
   - export PATH=$PATH:`pwd`/premake5
 script:
   - cd $TRAVIS_BUILD_DIR
-  - premake5 projects/premake5.lua
+  - echo $PWD
+  - ls -la
