@@ -1,0 +1,28 @@
+sudo: false
+language: cpp
+compiler:
+  - clang
+  - gcc
+install: 
+ - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - libyajl-dev
+    - libxml2-dev
+    - gcc-4.8
+    - g++-4.8
+    - clang
+env:
+  - GARRYSMOD_COMMON="$TRAVIS_BUILD_DIR/garrysmod_common"
+  - SOURCE_SDK="$TRAVIS_BUILD_DIR/sourcesdk-minimal"
+before_script:
+  - wget https://github.com/PAC3-Server/premake5-travis/raw/master/premake5
+  - git clone https://github.com/danielga/garrysmod_common.git
+  - git clone https://github.com/danielga/sourcesdk-minimal.git
+  - export PATH=$PATH:`pwd`/premake5
+script:
+  - cd $TRAVIS_BUILD_DIR
+  - premake5 projects/premake5.lua
