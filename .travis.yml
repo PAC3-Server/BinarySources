@@ -15,8 +15,7 @@ addons:
     - g++-4.8
     - clang
 env:
-  - GARRYSMOD_COMMON="$TRAVIS_BUILD_DIR/../garrysmod_common"
-  - SOURCE_SDK="$TRAVIS_BUILD_DIR/../sourcesdk-minimal"
+  - GARRYSMOD_COMMON="$TRAVIS_BUILD_DIR/../garrysmod_common" SOURCE_SDK="$TRAVIS_BUILD_DIR/../sourcesdk-minimal"
 before_script:
   - wget https://github.com/PAC3-Server/premake5-travis/raw/master/premake5
   - chmod +x premake5
