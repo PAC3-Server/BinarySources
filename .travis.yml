@@ -27,9 +27,9 @@ before_script:
 script:
   - cd $TRAVIS_BUILD_DIR
   - for f in */projects; do 
-    path=$(dirname $f)
-    echo "Building $path"
-    premake5 --os=linux --file=$f/premake5.lua gmake
-    cd "$f/linux/gmake"
-    make
+      path=$(dirname $f);
+      echo "Building $path";
+      premake5 --os=linux --file=$f/premake5.lua gmake;
+      cd "$f/linux/gmake";
+      make;
     done
